@@ -36,7 +36,6 @@
     
         <nav class="navbar navbar-expand navbar-dark bg-dark">
                 
-
             <div class="col-3">
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-secondary bg-dark" data-toggle="modal" data-target="#exampleModal">
@@ -87,13 +86,13 @@
                 <a class="list-group-item list-group-item-action active" id="lis-s1" data-toggle="list" href="#s1" role="tab" aria-controls="home">
                     Datos Infractor
                 </a>
-                <a class="list-group-item list-group-item-action" id="list-s2" data-toggle="list" href="#s2" role="tab" aria-controls="profile">
+                <a class="list-group-item disabled" id="list-s2" data-toggle="list" href="#s2" role="tab" aria-controls="profile">
                     Sancion Disciplinaria
                 </a>
-                <a class="list-group-item list-group-item-action" id="list-s3" data-toggle="list" href="#s3" role="tab" aria-controls="messages">
+                <a class="list-group-item disabled" id="list-s3" data-toggle="list" href="#s3" role="tab" aria-controls="messages">
                     Impuesto por
                 </a>
-                <a class="list-group-item list-group-item-action" id="list-s4" data-toggle="list" href="#s4" role="tab" aria-controls="settings">
+                <a class="list-group-item disabled" id="list-s4" data-toggle="list" href="#s4" role="tab" aria-controls="settings">
                     Enterado Infractor
                 </a>
             </div>
@@ -104,10 +103,12 @@
 
             <div class="tab-content" id="nav-tabContent">
 
-<!-             DATOS DEL INFRACTOR                                                                             ->
-                <div class="tab-pane fade show active" id="s1" role="tabpanel" aria-labelledby="list-home-list">
+<!-DATOS DEL INFRACTOR->                
+                    <div class="tab-pane fade show active" id="s1" role="tabpanel" aria-labelledby="list-home-list">
+
 
                     <h4 align="center"><br>DATOS DEL INFRACTOR</h4><br>
+
                     <!-1RA VARIABLE->
                     <div class="row">
                         <div class="col-3">
@@ -115,14 +116,17 @@
                         </div>
 
                         <div class="col-9">
-                            <input type="number" class="form-control opacity" id="valdniCuad" name="valdniCuad" placeholder="Inserte el DNI" required>
-                            <div class="invalid-feedback">
-                                <li>Inserte el DNI del Infractor.</li>
+                                <input type="number" class="form-control" id="valfsCuad" name="valfsCuad" placeholder="Inserte el DNI" required>
+
+                                <div class="invalid-feedback">
+
+                                    <li>Seleccione el dni</li>
+                                </div>
+                                <div class="valid-feedback">
+                                </div>
                             </div>
-                            <div class="valid-feedback">
-                            </div>
-                        </div>
                     </div>
+
                     <!-2DA VARIABLE->
                     <div class="row">
                         <div class="col-3">
@@ -246,8 +250,6 @@
                                 <option value="Carp            ">Carp           </option>
                                 <option value="Herr            ">Herr           </option>
                                 <option value="Aux Enf         ">Aux Enf        </option>
-
-
                             </select>
                             <div class="valid-feedback">
                             </div>
@@ -264,21 +266,18 @@
                             <div class="invalid-feedback">
                                 <li>Inserte el Destino Interno del Infractor.</li>
                             </div>
-                            
                             <div class="valid-feedback">
                             </div>
-                            
 
                         </div>
 
                     </div><br>
 
                     <!-BOTONES SIGUIENTE Y CANCELAR->
-                    <div align="right"><br>
-                        <button type="submit" class="btn btn-primary">
+                    <div align="right" >
+                        <button type="submit" class="btn btn-primary" onclick="siguiente1()" >
                         Siguiente
-                    </button><br><br>
-
+                    </button>
                         </div>
 
  </div>
@@ -415,7 +414,7 @@
                             <label for="var24">Motivo</label>
                         </div>
                         <div class="col-9">
-                            <textarea class="form-control" rows="5" id="motivoCuad" name="motivoCuad" placeholder="Inserte el Motivo" required></textarea>    
+                            <textarea class="form-control" rows="3" id="motivoCuad" name="motivoCuad" placeholder="Inserte el Motivo" required></textarea>    
                 
                             <div class="invalid-feedback">
                                 <li>Inserte el Motivo de la Sancion</li>
@@ -498,6 +497,11 @@
                             </div>
                         </div>
                     </div><br>
+                    <div align="right" >
+                        <button type="submit" class="btn btn-primary" onclick="siguiente2()">
+                        Siguiente
+                    </button>
+                        </div>
                 </div>
 
 
@@ -579,30 +583,17 @@
                             <label for="var35">Cargo</label>
                         </div>
                         <div class="col-9">
-                            <select class="form-control" name="valCargoAutoCuad"  id="valCargoAutoCuad" required>
-                                <option>Dir CMN                     </option>
-                                <option>Subdir y JEM CMN            </option>
-                                <option>J Agr Bas CMN               </option>
-                                <option>J Agr Cso(s) y Serv(s) CMN  </option>
-                                <option>J Agr Mont CMN              </option>
-                                <option>J Agr Esp(s) CMN            </option>
-                                <option>J Agr Apy CMN               </option>
-                                <option>J BA CMN                    </option>
-                                <option>J BI CMN                    </option>
-                                <option>J Ca 1er Año A, B y C       </option>
-                                <option>J Ca Cpo Prof               </option>
-                                <option>J Ca Int CMN                </option>
-                                <option>J Ca Ars CMN                </option>
-                                <option>J Ca Ing CMN                </option>
-                                <option>J Esc C CMN                 </option>
-                                <option>J 1ra Ca I                  </option>
-                                <option>J 2da Ca I                  </option>   
-
-                            </select>
+                            <input  type="text" class="form-control" name="valCargoAutoCuad"  id="valCargoAutoCuad" placeholder="Inserte el cargo" required>
+                            
                             <div class="valid-feedback">
                             </div>
                         </div>
                     </div><br>
+                    <div align="right" >
+                        <button type="submit" class="btn btn-primary" onclick="siguiente3()">
+                        Siguiente
+                    </button>
+                        </div>
                 </div>
 <!-             ENTERADO DEL INFRACTOR                                                                          ->
                 <div class="tab-pane fade" id="s4" role="tabpanel" aria-labelledby="list-settings-list">
@@ -705,7 +696,50 @@
         });
       }, false);
     })();
+
+    function siguiente1()
+    {
         
+           if (4==4) {
+
+                alert ("Se ha admitido el valor");
+                $('#s1').removeClass().addClass('tab-pane fade');
+                $('#lis-s1').removeClass().addClass('list-group-item list-group-item-action');
+                $('#s2').addClass('tab-pane fade active show');
+                $('#list-s2').removeClass().addClass('list-group-item list-group-item-action active');
+                $('#list-s3').removeClass().addClass('list-group-item disabled');
+                alert ("No se ha admitido el valor");
+
+        } else {
+
+                
+        }
+
+        
+        
+
+
+    }
+
+    function siguiente2()
+    {
+        $('#s2').removeClass().addClass('tab-pane fade');
+        $('#list-s2').removeClass().addClass('list-group-item list-group-item-action');
+        $('#s3').addClass('tab-pane fade active show');
+        $('#list-s3').removeClass().addClass('list-group-item list-group-item-action active');
+
+    }
+
+    function siguiente3()
+    {
+        $('#s3').removeClass().addClass('tab-pane fade');
+        $('#list-s3').removeClass().addClass('list-group-item list-group-item-action');
+        $('#s4').addClass('tab-pane fade active show');
+        $('#list-s4').removeClass().addClass('list-group-item list-group-item-action active');
+
+    }
+      
+
 </script>
 
     <!--------------------------------FIN contenido**************************-->
