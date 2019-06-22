@@ -29,7 +29,7 @@
 
     <body>  
     <!--------------------------------Inicio contenido***********************-->
-<form action="InfoAccEnf" class="was-validated needs-validation" method="get" novalidate>
+<form action="InfoAccEnf" class="needs-validation" method="get" novalidate>
 <div class="container-fluid">
 
     <div class="row-fluid">
@@ -81,25 +81,25 @@
 
     <div class="row">
 
-        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" align="center">
+        <div  class="col-sm-3 col-md-3 col-lg-3 col-xl-3" align="center">
 
-            <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action active" id="lis-s1" data-toggle="list" href="#s1" role="tab" aria-controls="home">
+            <div  class="position-fixed" class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action" id="lis-s1" href="#s1">
                     Caratula
                 </a>
-                <a class="list-group-item list-group-item-action" id="list-s2" data-toggle="list" href="#s2" role="tab" aria-controls="profile">
+                <a class="list-group-item list-group-item-action" id="list-s2" href="#s2">
                     Iniciando Tramite
                 </a>
-                <a class="list-group-item list-group-item-action" id="list-s3" data-toggle="list" href="#s3" role="tab" aria-controls="messages">
+                <a class="list-group-item list-group-item-action" id="list-s3" href="#s3">
                     Acta Declaracion Causante
                 </a>
-                <a class="list-group-item list-group-item-action" id="list-s4" data-toggle="list" href="#s4" role="tab" aria-controls="settings">
+                <a class="list-group-item list-group-item-action" id="list-s4" href="#s4">
                     Acta Declaracion Testigo 1
                 </a>
-                <a class="list-group-item list-group-item-action" id="list-s5" data-toggle="list" href="#s5" role="tab" aria-controls="settings">
+                <a class="list-group-item list-group-item-action" id="list-s5" href="#s5">
                     Acta Declaracion Testigo 2
                 </a>
-                <a class="list-group-item list-group-item-action" id="list-s6" data-toggle="list" href="#s6" role="tab" aria-controls="settings">
+                <a class="list-group-item list-group-item-action" id="list-s6" href="#s6">
                     Conclusiones
                 </a>
             </div>
@@ -456,7 +456,7 @@
                     </div>
                 </div>
 <!-             DILIGENCIA INICIANDO TRAMITE                                                                    ->
-                <div class="tab-pane fade" id="s2" role="tabpanel" aria-labelledby="list-profile-list">
+                <div class="tab-pane fade show active" id="s2" role="tabpanel" aria-labelledby="list-profile-list">
                     <h5 align="center"><strong>DILIGENCIA INICIANDO TRAMITE</strong></h5>
                     <!DATO DE FECHA->
                     <div class="container-fluid">
@@ -742,7 +742,7 @@
                     </div><br>
                 </div>
 <!-             ACTA DECLARACION CAUSANTE                                                                       ->
-                <div class="tab-pane fade" id="s3" role="tabpanel" aria-labelledby="list-messages-list">
+                <div class="tab-pane fade show active" id="s3" role="tabpanel" aria-labelledby="list-messages-list">
                     <h5 align="center"><strong>ACTA DECLARACION DEL CAUSANTE</strong></h5>
                     <!DATO DE FECHA->
                     <div class="container-fluid">
@@ -1093,7 +1093,7 @@
                     </div>
                 </div>
 <!-             ACTA DECLARACION TESTIGO 1                                                                     ->
-                <div class="tab-pane fade border" id="s4" role="tabpanel" aria-labelledby="list-messages-list">
+                <div class="tab-pane fade active show" id="s4" role="tabpanel" aria-labelledby="list-messages-list">
                     <h5 align="center"><strong>ACTA DECLARACIóN TESTIGO 1</strong></h5>
 
 
@@ -1582,7 +1582,7 @@
 
                 </div>
 <!-             ACTA DECLARACION TESTIGO 2                                                                     ->
-                <div class="tab-pane fade" id="s5" role="tabpanel" aria-labelledby="list-messages-list">
+                <div class="tab-pane fade active show" id="s5" role="tabpanel" aria-labelledby="list-messages-list">
                     <h5 align="center"><strong>ACTA DECLARACION TESTIGO 2</strong></h5>
 
 
@@ -2069,7 +2069,7 @@
                     </div>
                 </div>  
 <!-             CONCLUSIONES                                                                                   ->
-                <div class="tab-pane fade" id="s6" role="tabpanel" aria-labelledby="list-settings-list">
+                <div class="tab-pane fade active show" id="s6" role="tabpanel" aria-labelledby="list-settings-list">
                     <h5 align="center"><strong>CONCLUSIONES</strong></h5>
 
                     <!-AFECCION/LESION DEL CAUSANTE>
@@ -2392,6 +2392,7 @@
             if (form.checkValidity() === false) {
               event.preventDefault();
               event.stopPropagation();
+              
             }
             form.classList.add('was-validated');
           }, false);

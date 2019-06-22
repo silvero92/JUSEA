@@ -14,7 +14,7 @@
         <link href="<?= base_url('css/bootstrap.min.css') ?>"        rel="stylesheet" media="screen">
         <link href="<?= base_url('css/Article-List.css') ?>"         rel="stylesheet" >
         <link href="<?= base_url('css/bootstrap-grid.min.css') ?>"   rel="stylesheet" >
-        
+        <link href="<?= base_url('css/estilos.css') ?>"   rel="stylesheet" >
         <!--Se inserta la relacion del documento, tipo de dato y su ubicacion (puede ser una ubicacion logica local o un link de una pagina)  -->
 
         <title>JUSEA</title>
@@ -84,6 +84,18 @@
 
 
                 </div>
+                 <div class="col-sm-6 col-md-3 item">
+                <button type="button" class="btn btn-light shadow-lg p-3 mb-1 bg-white rounded " data-toggle="modal" onclick=" location.href='<?= base_url('SanmeaControlador/historialSanciones')?>' ">
+                        <img src="<?= base_url('img/sancion.png') ?>" class="img-fluid" />
+                    </button>
+                    <h3 class="name">Historial de Sanciones</h3>
+                    </div> 
+                <div class="col-sm-6 col-md-3 item">
+                <button type="button" class="btn btn-light shadow-lg p-3 mb-1 bg-white rounded " data-toggle="modal" onclick=" location.href='<?= base_url('SanmeaControlador/encabezado')?>' ">
+                        <img src="<?= base_url('img/sancion.png') ?>" class="img-fluid" />
+                    </button>
+                    <h3 class="name">Modificar encabezado</h3>
+                    </div>              
 
 
 

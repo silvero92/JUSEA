@@ -85,17 +85,17 @@
 
         <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" align="center">
 
-            <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action active" id="lis-s1" data-toggle="list" href="#s1" role="tab" aria-controls="home">
+            <div class="position-fixed" class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action" id="lis-s1" href="#s1">
                     Informacion Cabecera
                 </a>
-                <a class="list-group-item list-group-item-action" id="list-s2" data-toggle="list" href="#s2" role="tab" aria-controls="profile">
+                <a class="list-group-item list-group-item-action" id="list-s2" href="#s2">
                     Dirijida a 
                 </a>
-                <a class="list-group-item list-group-item-action" id="list-s3" data-toggle="list" href="#s3" role="tab" aria-controls="messages">
+                <a class="list-group-item list-group-item-action" id="list-s3" href="#s3">
                     Informacion Causante
                 </a>
-                <a class="list-group-item list-group-item-action" id="list-s4" data-toggle="list" href="#s4" role="tab" aria-controls="settings">
+                <a class="list-group-item list-group-item-action" id="list-s4" href="#s4">
                     Fecha Nota
                 </a>
             </div>
@@ -145,7 +145,7 @@
                 </div>
 
 <!-             DIRIJIDA A                                                                                      ->
-                <div class="tab-pane fade" id="s2" role="tabpanel" aria-labelledby="list-profile-list">
+                <div class="tab-pane fade show active" id="s2" role="tabpanel" aria-labelledby="list-profile-list">
 
                     <h4 align="center"><br>ELEVO A USTED</h4><br>
 
@@ -291,7 +291,7 @@
 
 
 <!-             INFORMACION DEL CAUSANTE                                                                        ->
-                <div class="tab-pane fade" id="s3" role="tabpanel" aria-labelledby="list-messages-list">
+                <div class="tab-pane fade show active" id="s3" role="tabpanel" aria-labelledby="list-messages-list">
                     <h4 align="center"><br>INFORMACION DEL CAUSANTE</h4><br>
                     <!-1RA VARIABLE-DNI->
                     <div class="row">
@@ -431,7 +431,7 @@
                     </div><br>
                 </div>
 <!-             FECHA DE LA NOTA                                                                                ->
-                <div class="tab-pane fade" id="s4" role="tabpanel" aria-labelledby="list-settings-list">
+                <div class="tab-pane fade show active" id="s4" role="tabpanel" aria-labelledby="list-settings-list">
                     <h4 align="center"><br>FECHA DE LA NOTA</h4><br>
                     <!-1RA VARIABLE-DIA->
                     <div class="row">
@@ -557,7 +557,7 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">
-                        Siguiente
+                        IMPRIMIR
                     </button><br><br>
                 </div>
             </div>
